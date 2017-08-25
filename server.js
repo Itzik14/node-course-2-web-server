@@ -47,6 +47,12 @@ app.get('/about', (req,res) => {
     }); //help us render any of our templates we set up
 });
 
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'project page'
+    });
+});
+
 app.get('/bad', (req,res) => {
     res.send({
         errorMassage: 'error handling request'});
